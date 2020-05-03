@@ -39,7 +39,7 @@ Even though this might be configured on some systems, the stack each thread need
 
 #### Context switches and overhead
 
-Even though the OS is pretty good at running many threads concurrently context switches has some overhead, but the real cost lies in creating new threads which involves a lot of bookkeeping and setup related to security. We could alleviate this slightly by using a thread pool. A thread pool it's still not optimal in the typical use case when we have a huge amount of small tasks which are mostly waiting, or if the number of tasks \(the load\) varies a lot.
+Though the OS is pretty good at running many threads concurrently, context switches have some overhead. Costlier by far is the bookkeeping and security setup involved in creating new threads. We could alleviate this slightly by using a thread pool. A thread pool is still not optimal in the typical use case when we have a huge amount of small tasks which are mostly waiting, or if the number of tasks \(the load\) varies a lot.
 
 ### Epoll/Kqueue/IOCP
 
